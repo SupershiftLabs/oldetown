@@ -1,5 +1,5 @@
-import { Phone, Calendar } from "lucide-react";
-import { IMAGES, PHONE, PHONE_TEL, BOOKING_URL } from "@/lib/site";
+import { Phone } from "lucide-react";
+import { IMAGES, PHONE, PHONE_TEL } from "@/lib/site";
 import { useLead } from "./LeadContext";
 
 export default function FinalCTA() {
@@ -29,14 +29,6 @@ export default function FinalCTA() {
             <Phone className="h-5 w-5" /> Call {PHONE}
           </a>
         </div>
-        <a
-          href={BOOKING_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center gap-2 text-sm text-white/60 hover:text-white"
-        >
-          <Calendar className="h-4 w-4" /> Or book a time online
-        </a>
       </div>
     </section>
   );
