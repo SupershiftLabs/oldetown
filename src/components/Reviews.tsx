@@ -16,7 +16,7 @@ export default function Reviews() {
         <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-2">
           What our customers say.
         </h2>
-        <
+        <a
           href="https://share.google/WPIYznW05E8LxvMXP"
           target="_blank"
           rel="noopener noreferrer"
