@@ -27,7 +27,6 @@ export default function AppLayout() {
             repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,.03) 40px, rgba(255,255,255,.03) 80px),
             repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(255,255,255,.02) 40px, rgba(255,255,255,.02) 80px)
           `,
-          backgroundAttachment: 'fixed',
         }}
       >
         <Header />

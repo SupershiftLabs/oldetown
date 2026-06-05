@@ -43,35 +43,17 @@ export default function Gallery() {
           </div>
         </div>
 
-        <div className="relative group">
-          {/* Left Button */}
-          <button
-            onClick={() => scroll("left")}
-            className="absolute -left-20 top-1/2 -translate-y-1/2 z-20 bg-[#D71920] hover:bg-[#b3141a] text-white p-3 rounded-full transition-all duration-300"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </button>
-
-          {/* Right Button */}
-          <button
-            onClick={() => scroll("right")}
-            className="absolute -right-20 top-1/2 -translate-y-1/2 z-20 bg-[#D71920] hover:bg-[#b3141a] text-white p-3 rounded-full transition-all duration-300"
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="h-6 w-6" />
-          </button>
-
+        <div className="relative">
           {/* Carousel Container */}
           <div
             ref={containerRef}
-            className="flex gap-4 overflow-x-auto scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-4"
+            className="flex gap-3 overflow-x-auto scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           >
             {SHOTS.map((src, i) => (
               <div
                 key={i}
                 onClick={() => setSelectedImage(src)}
-                className="flex-shrink-0 w-96 rounded-lg overflow-hidden border border-white/10 hover:border-[#D71920]/50 transition-colors group/card cursor-pointer"
+                className="flex-shrink-0 w-[72vw] sm:w-72 lg:w-96 rounded-lg overflow-hidden border border-white/10 hover:border-[#D71920]/50 transition-colors group/card cursor-pointer"
               >
                 <div className="relative overflow-hidden bg-[#0d0d0d] aspect-video">
                   <img
@@ -85,6 +67,24 @@ export default function Gallery() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Nav Buttons — visible on all screen sizes */}
+          <div className="flex justify-end gap-3 mt-4">
+            <button
+              onClick={() => scroll("left")}
+              className="bg-white/10 hover:bg-[#D71920] text-white p-3 rounded-full transition-colors"
+              aria-label="Scroll left"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              className="bg-white/10 hover:bg-[#D71920] text-white p-3 rounded-full transition-colors"
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
           </div>
         </div>
       </div>

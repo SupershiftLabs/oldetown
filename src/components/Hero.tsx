@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/85 to-[#0A0A0A]/30" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]/40" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-28 pb-16 w-full">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-20 sm:pt-28 pb-16 w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export default function Hero() {
             Springfield & Southwest Missouri
           </div>
 
-          <h1 className="text-[2.7rem] leading-[1.02] sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white">
+          <h1 className="text-[2rem] leading-[1.05] sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white">
             ROOFS BUILT TO <span className="text-[#D71920]">SURVIVE</span> MISSOURI STORMS
           </h1>
 
@@ -46,7 +46,7 @@ export default function Hero() {
             Fast estimates. No pressure. No nonsense.
           </p>
 
-          <div className="mt-9 flex flex-col sm:flex-row gap-4">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
             <button
               onClick={() => openModal()}
               className="bg-[#D71920] hover:bg-[#b3141a] text-white font-semibold text-base px-8 py-4 rounded-full transition-transform hover:scale-[1.03] shadow-lg shadow-[#D71920]/30"

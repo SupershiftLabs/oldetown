@@ -22,7 +22,7 @@ export default function WhyUs() {
           transition={{ duration: 0.7 }}
           className="relative rounded-3xl overflow-hidden"
         >
-          <img src={IMAGES.aerial1} alt="Completed Missouri roof" className="w-full h-[480px] object-cover" />
+          <img src={IMAGES.aerial1} alt="Completed Missouri roof" className="w-full h-[260px] sm:h-[380px] lg:h-[480px] object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent" />
           <div className="absolute bottom-6 left-6 right-6 flex gap-6">
             <div>

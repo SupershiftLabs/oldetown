@@ -33,7 +33,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#0A0A0A]/90 backdrop-blur-xl border-b border-white/10" : "bg-transparent"
+        scrolled ? "bg-[#0A0A0A]/90 backdrop-blur-xl border-b border-white/10" : "bg-gradient-to-b from-[#0A0A0A]/70 to-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-4 h-16 flex items-center justify-between">

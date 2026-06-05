@@ -45,7 +45,7 @@ export default function About() {
           </div>
 
           <div className="relative">
-            <div className="relative rounded-3xl border border-white/10 bg-gradient-to-br from-[#D71920]/20 to-[#D71920]/5 p-8 sm:p-12">
+            <div className="relative rounded-3xl border border-white/10 bg-gradient-to-br from-[#D71920]/20 to-[#D71920]/5 p-6 sm:p-12">
               <div className="absolute -top-8 -right-8 w-32 h-32 bg-[#D71920]/10 rounded-full blur-3xl" />
               <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-[#D71920]/10 rounded-full blur-3xl" />
               
