@@ -1,17 +1,16 @@
 import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { IMAGES } from "@/lib/site";
 
 const SHOTS = [
-  IMAGES.aerial2, IMAGES.metal1, IMAGES.work1, IMAGES.aerial3,
-  IMAGES.metal2, IMAGES.work3, IMAGES.metal3, IMAGES.work4,
-  IMAGES.aerial2, IMAGES.metal1, IMAGES.work1, IMAGES.aerial3,
-  IMAGES.metal2, IMAGES.work3, IMAGES.metal3, IMAGES.work4,
+  "/IMG_7060.jpg", "/IMG_7061.jpg", "/IMG_7062.jpg", "/IMG_7063.jpg",
+  "/IMG_7064.jpg", "/IMG_7065.jpg", "/IMG_7066.jpg", "/IMG_7067.jpg",
+  "/IMG_7068.jpg", "/IMG_7069.jpg", "/IMG_7070.jpg", "/IMG_7071.jpg",
+  "/IMG_7072.jpg", "/IMG_7073.jpg", "/IMG_7074.jpg", "/IMG_7075.jpg",
 ];
 
 export default function Gallery() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [selectedImage, setSelectedImage] = useState<string>(IMAGES.aerial1);
+  const [selectedImage, setSelectedImage] = useState<string>(SHOTS[0]);
   const [paused, setPaused] = useState(false);
 
   const scroll = (direction: "left" | "right") => {
