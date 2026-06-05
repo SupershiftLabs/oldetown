@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { IMAGES } from "@/lib/site";
 
@@ -12,15 +12,31 @@ const SHOTS = [
 export default function Gallery() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [selectedImage, setSelectedImage] = useState<string>(IMAGES.aerial1);
+  const [paused, setPaused] = useState(false);
 
   const scroll = (direction: "left" | "right") => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({
-        left: direction === "left" ? -400 : 400,
-        behavior: "smooth",
-      });
+    if (!containerRef.current) return;
+    const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
+    if (direction === "right") {
+      if (scrollLeft + clientWidth >= scrollWidth - 10) {
+        containerRef.current.scrollLeft = 0;
+      } else {
+        containerRef.current.scrollBy({ left: 320, behavior: "smooth" });
+      }
+    } else {
+      if (scrollLeft <= 10) {
+        containerRef.current.scrollLeft = scrollWidth;
+      } else {
+        containerRef.current.scrollBy({ left: -320, behavior: "smooth" });
+      }
     }
   };
+
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(() => scroll("right"), 3000);
+    return () => clearInterval(id);
+  }, [paused]);
 
   return (
     <section id="projects" className="py-24 bg-[#0A0A0A]">
@@ -47,6 +63,10 @@ export default function Gallery() {
           {/* Carousel Container */}
           <div
             ref={containerRef}
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onTouchStart={() => setPaused(true)}
+            onTouchEnd={() => setPaused(false)}
             className="flex gap-3 overflow-x-auto scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           >
             {SHOTS.map((src, i) => (

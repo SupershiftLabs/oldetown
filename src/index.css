@@ -5,6 +5,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  background-color: #0A0A0A;
+  overscroll-behavior-x: none;
+}
+
 @layer base {
   :root {
     --background: 210 40% 98%;
