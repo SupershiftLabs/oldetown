@@ -1,32 +1,20 @@
 import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+const favicon = (domain: string) =>
+  `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.${domain}&size=256`;
+
 const PARTNERS = [
-  {
-    name: "GAF",
-    category: "Roofing Systems",
-    url: "https://www.gaf.com",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/GAF_Materials_Corporation_logo.svg/320px-GAF_Materials_Corporation_logo.svg.png",
-  },
-  {
-    name: "GAF Master Elite",
-    category: "Certified Contractor Program",
-    url: "https://www.gaf.com/en-us/roofing-contractors/find-a-contractor/master-elite",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/GAF_Materials_Corporation_logo.svg/320px-GAF_Materials_Corporation_logo.svg.png",
-  },
-  {
-    name: "GAF Golden Pledge",
-    category: "System Plus Warranty",
-    url: "https://www.gaf.com/en-us/roofing-systems/residential/warranties/golden-pledge-ltd-warranty",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/GAF_Materials_Corporation_logo.svg/320px-GAF_Materials_Corporation_logo.svg.png",
-  },
-  { name: "Owens Corning", category: "Roofing & Insulation", url: "https://www.owenscorning.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Owens_Corning_logo.svg/320px-Owens_Corning_logo.svg.png" },
-  { name: "CertainTeed", category: "Roofing & Siding", url: "https://www.certainteed.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/CertainTeed_logo.svg/320px-CertainTeed_logo.svg.png" },
-  { name: "Atlas Roofing", category: "Roofing Systems", url: "https://www.atlasroofing.com", logo: "https://www.atlasroofing.com/images/atlas-logo.png" },
-  { name: "IKO", category: "Roofing Products", url: "https://www.iko.com", logo: "https://www.iko.com/na/wp-content/themes/iko/images/iko-logo.svg" },
-  { name: "TAMKO", category: "Building Products", url: "https://www.tamko.com", logo: "https://www.tamko.com/wp-content/uploads/tamko-logo.png" },
-  { name: "James Hardie", category: "Siding & Cladding", url: "https://www.jameshardie.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/James_Hardie_logo.svg/320px-James_Hardie_logo.svg.png" },
-  { name: "Velux", category: "Skylights & Roof Windows", url: "https://www.velux.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/VELUX_logo.svg/320px-VELUX_logo.svg.png" },
+  { name: "GAF", category: "Roofing Systems", url: "https://www.gaf.com", logo: favicon("gaf.com") },
+  { name: "GAF Master Elite", category: "Certified Contractor Program", url: "https://www.gaf.com/en-us/roofing-contractors/find-a-contractor/master-elite", logo: favicon("gaf.com") },
+  { name: "GAF Golden Pledge", category: "System Plus Warranty", url: "https://www.gaf.com/en-us/roofing-systems/residential/warranties/golden-pledge-ltd-warranty", logo: favicon("gaf.com") },
+  { name: "Owens Corning", category: "Roofing & Insulation", url: "https://www.owenscorning.com", logo: favicon("owenscorning.com") },
+  { name: "CertainTeed", category: "Roofing & Siding", url: "https://www.certainteed.com", logo: favicon("certainteed.com") },
+  { name: "Atlas Roofing", category: "Roofing Systems", url: "https://www.atlasroofing.com", logo: favicon("atlasroofing.com") },
+  { name: "IKO", category: "Roofing Products", url: "https://www.iko.com", logo: favicon("iko.com") },
+  { name: "TAMKO", category: "Building Products", url: "https://www.tamko.com", logo: favicon("tamko.com") },
+  { name: "James Hardie", category: "Siding & Cladding", url: "https://www.jameshardie.com", logo: favicon("jameshardie.com") },
+  { name: "Velux", category: "Skylights & Roof Windows", url: "https://www.velux.com", logo: favicon("velux.com") },
 ];
 
 function PartnerCard({ p }: { p: typeof PARTNERS[0] }) {
