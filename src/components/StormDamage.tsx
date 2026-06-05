@@ -57,8 +57,7 @@ export default function StormDamage() {
           onClick={() => openModal("Storm Damage Restoration")}
           className="mt-10 w-full sm:w-auto bg-[#D71920] hover:bg-[#b3141a] text-white font-semibold px-8 py-4 rounded-full transition-transform hover:scale-[1.03] text-sm sm:text-base"
         >
-          <span className="sm:hidden">Start My Storm Claim</span>
-          <span className="hidden sm:inline">Start My Reconstruction Portion of My Storm Claim</span>
+          Start My Reconstruction Portion of My Storm Claim
         </button>
       </div>
     </section>
