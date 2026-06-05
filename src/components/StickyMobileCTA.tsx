@@ -5,7 +5,7 @@ import { useLead } from "./LeadContext";
 export default function StickyMobileCTA() {
   const { openModal } = useLead();
   return (
-    <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-[#0A0A0A]/95 backdrop-blur-xl border-t border-white/10 px-3 py-3 flex gap-3">
+    <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-[#0A0A0A]/95 backdrop-blur-xl border-t border-white/10 px-3 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] flex gap-3">
       <a
         href={PHONE_TEL}
         className="flex-1 flex items-center justify-center gap-2 border border-white/20 text-white font-semibold py-3 rounded-full text-sm"

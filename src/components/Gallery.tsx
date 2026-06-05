@@ -45,7 +45,7 @@ export default function Gallery() {
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
             See the difference for yourself.
           </h2>
-          <p className="mt-4 text-white/60 text-lg">Swipe through our best work. Real roofs, real Missouri homes.</p>
+          <p className="mt-4 text-white/60 text-lg">View some of our projects</p>
         </div>
 
         <div className="mb-12">
@@ -80,9 +80,6 @@ export default function Gallery() {
                     alt={`Roofing project ${i + 1}`}
                     className="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <span className="text-white font-semibold">Project {i + 1}</span>
-                  </div>
                 </div>
               </div>
             ))}

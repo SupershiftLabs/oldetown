@@ -20,13 +20,13 @@ export default function About() {
               Built on honesty, respect, and expert craftsmanship.
             </h2>
             <p className="text-white/60 text-lg mb-6">
-              Founded in 2004 by Sean Vogler, Olde Town Roofing was built on a simple principle: deliver exceptional workmanship and treat every customer with honesty and respect.
+              Founded in 2004 by Sean Vogler, Olde Town Roofing was built on a principle that's become rare in this industry: do the work right, price it honestly, and answer for it when it's done.
             </p>
             <p className="text-white/60 text-lg mb-6">
-              What started as a local roofing company in Moline, Illinois, has grown into a trusted regional contractor serving homeowners and businesses across Illinois, Iowa, Wisconsin, Missouri, Minnesota, and Nebraska.
+              22 years of being a family owned business — not a private equity firm. We price to live our lives, not to make yet another hedge fund manager a multimillionaire. Most companies in our position have already sold out to private equity. We haven't, and we don't plan to.
             </p>
             <p className="text-white/60 text-lg mb-8">
-              With more than two decades of experience, our team specializes in high-quality roofing solutions backed by expert installation, premium materials, and outstanding customer service. Whether it's storm damage restoration, roof replacement, repairs, or new construction, we are committed to protecting what matters most—your home, your business, and your peace of mind.
+              That means the person who gives you your estimate is accountable to you — not to a board of investors in another state. It means we stand behind our work because our name is on it, not because a warranty department will handle the call.
             </p>
             <p className="text-white/60 text-lg mb-8 font-semibold">
               At Olde Town Roofing, every project is built to last, and every customer is treated like family.

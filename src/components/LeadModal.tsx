@@ -45,7 +45,7 @@ export default function LeadModal() {
             initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 60, opacity: 0 }}
             transition={{ type: "spring", damping: 28, stiffness: 300 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full sm:max-w-lg bg-[#101010] border border-white/10 rounded-t-3xl sm:rounded-3xl p-6 sm:p-8 max-h-[92vh] overflow-y-auto"
+            className="relative w-full sm:max-w-lg bg-[#101010] border border-white/10 rounded-t-3xl sm:rounded-3xl p-6 sm:p-8 max-h-[92svh] overflow-y-auto pb-[calc(1.5rem+env(safe-area-inset-bottom))] sm:pb-8"
           >
             <button onClick={closeModal} className="absolute top-5 right-5 text-white/50 hover:text-white">
               <X className="h-6 w-6" />
@@ -74,25 +74,28 @@ export default function LeadModal() {
                 <form onSubmit={submit} className="mt-6 space-y-4">
                   <input
                     placeholder="Full name *" value={form.name}
+                    autoComplete="name"
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none text-base"
                   />
                   <div className="grid sm:grid-cols-2 gap-4">
                     <input
                       placeholder="Phone *" value={form.phone}
+                      type="tel" inputMode="tel" autoComplete="tel"
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none text-base"
                     />
                     <input
-                      placeholder="Email" type="email" value={form.email}
+                      placeholder="Email" type="email" inputMode="email" autoComplete="email" value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none text-base"
                     />
                   </div>
                   <input
                     placeholder="Property address" value={form.address}
+                    autoComplete="street-address"
                     onChange={(e) => setForm({ ...form, address: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none text-base"
                   />
                   <select
                     value={form.service}

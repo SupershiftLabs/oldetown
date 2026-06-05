@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Receipt, MessageSquare, Gem, Sparkles, Award } from "lucide-react";
-import { IMAGES } from "@/lib/site";
 
 const POINTS = [
   { icon: Receipt, title: "Transparent Estimates", text: "Itemized, honest pricing. You'll know exactly what you're paying for and why." },
@@ -21,7 +20,7 @@ export default function WhyUs() {
           transition={{ duration: 0.7 }}
           className="relative rounded-3xl overflow-hidden"
         >
-          <img src={IMAGES.aerial1} alt="Completed Missouri roof" className="w-full h-[260px] sm:h-[380px] lg:h-[480px] object-cover" />
+          <img src="/IMG_7074.jpg" alt="Completed Missouri roof" className="w-full h-[260px] sm:h-[380px] lg:h-[480px] object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent" />
           <div className="absolute bottom-6 left-6 right-6 flex gap-6">
             <div>
@@ -41,7 +40,7 @@ export default function WhyUs() {
             Built for Ozark weather. Built for homeowners.
           </h2>
           <p className="text-white/60 text-lg mb-8">
-            22 years of being a family owned business, not a corporate conglomerate. We price to live our lives — not to make yet another hedge fund manager a multimillionaire.
+            22 years of being a family owned business, not a private equity firm. We price to live our lives — not to make yet another hedge fund manager a multimillionaire.
           </p>
           <div className="grid sm:grid-cols-2 gap-6">
             {POINTS.map((p) => (

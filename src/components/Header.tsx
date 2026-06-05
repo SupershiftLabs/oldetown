@@ -81,12 +81,20 @@ export default function Header() {
               {n.label}
             </button>
           ))}
-          <button
-            onClick={() => { setMenu(false); openModal(); }}
-            className="w-full bg-[#D71920] text-white font-semibold py-3 rounded-full"
-          >
-            Get Free Inspection
-          </button>
+          <div className="pt-2 space-y-3">
+            <button
+              onClick={() => { setMenu(false); openModal(); }}
+              className="w-full bg-[#D71920] text-white font-semibold py-3 rounded-full"
+            >
+              Get Free Inspection
+            </button>
+            <a
+              href={PHONE_TEL}
+              className="flex items-center justify-center gap-2 w-full border border-white/20 text-white font-semibold py-3 rounded-full text-sm"
+            >
+              <Phone className="h-4 w-4" /> {PHONE}
+            </a>
+          </div>
         </div>
       )}
     </header>

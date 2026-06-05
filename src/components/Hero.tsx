@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import { Phone, ShieldCheck, FileCheck, Wallet, Search } from "lucide-react";
+import { Phone, ShieldCheck, Wallet, Search } from "lucide-react";
 import { IMAGES, PHONE, PHONE_TEL } from "@/lib/site";
 import { useLead } from "./LeadContext";
 
 const BADGES = [
   { icon: ShieldCheck, label: "Licensed & Insured" },
-  { icon: FileCheck, label: "Insurance Claim Specialists" },
-  { icon: Wallet, label: "Financing Available" },
+{ icon: Wallet, label: "Financing Available" },
   { icon: Search, label: "Free Inspections" },
 ];
 
@@ -56,7 +55,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl">
+          <div className="mt-12 grid grid-cols-3 gap-4 max-w-lg">
             {BADGES.map((b) => (
               <div key={b.label} className="flex items-center gap-2 text-sm text-white/70">
                 <b.icon className="h-5 w-5 text-[#D71920] shrink-0" />

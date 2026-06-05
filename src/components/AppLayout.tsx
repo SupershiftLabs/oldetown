@@ -21,7 +21,7 @@ export default function AppLayout() {
   return (
     <LeadProvider>
       <div 
-        className="min-h-screen bg-[#0A0A0A] text-white antialiased pb-16 lg:pb-0"
+        className="min-h-screen bg-[#0A0A0A] text-white antialiased pb-[calc(4rem+env(safe-area-inset-bottom))] lg:pb-0"
         style={{
           backgroundImage: `
             repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(255,255,255,.04) 60px, rgba(255,255,255,.04) 120px),

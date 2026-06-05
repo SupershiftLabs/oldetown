@@ -39,7 +39,6 @@ export const REVIEWS: { name: string; city: string; text: string }[] = [];
 export const TRUST = [
   "Licensed & Insured",
   "Financing Available",
-  "Insurance Claim Experts",
-  "Emergency Storm Response",
+"Emergency Storm Response",
   "5-Star Customer Experience",
 ];
