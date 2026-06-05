@@ -13,15 +13,10 @@ const BADGES = [
 export default function Hero() {
   const { openModal } = useLead();
   return (
-    <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
-      <motion.div
-        initial={{ scale: 1.15 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 12, ease: "easeOut" }}
-        className="absolute inset-0"
-      >
+    <section id="top" className="relative min-h-svh flex items-center overflow-hidden">
+      <div className="absolute inset-0">
         <img src={IMAGES.hero} alt="New premium roof in Springfield Missouri" className="w-full h-full object-cover" />
-      </motion.div>
+      </div>
       <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/85 to-[#0A0A0A]/30" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]/40" />
 
