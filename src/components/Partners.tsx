@@ -6,28 +6,57 @@ const PARTNERS = [
     name: "GAF",
     category: "Roofing Systems",
     url: "https://www.gaf.com",
-    logo: "https://logo.clearbit.com/gaf.com",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/GAF_Materials_Corporation_logo.svg/320px-GAF_Materials_Corporation_logo.svg.png",
   },
   {
     name: "GAF Master Elite",
     category: "Certified Contractor Program",
     url: "https://www.gaf.com/en-us/roofing-contractors/find-a-contractor/master-elite",
-    logo: "https://logo.clearbit.com/gaf.com",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/GAF_Materials_Corporation_logo.svg/320px-GAF_Materials_Corporation_logo.svg.png",
   },
   {
     name: "GAF Golden Pledge",
     category: "System Plus Warranty",
     url: "https://www.gaf.com/en-us/roofing-systems/residential/warranties/golden-pledge-ltd-warranty",
-    logo: "https://logo.clearbit.com/gaf.com",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/GAF_Materials_Corporation_logo.svg/320px-GAF_Materials_Corporation_logo.svg.png",
   },
-  { name: "Owens Corning", category: "Roofing & Insulation", url: "https://www.owenscorning.com", logo: "https://logo.clearbit.com/owenscorning.com" },
-  { name: "CertainTeed", category: "Roofing & Siding", url: "https://www.certainteed.com", logo: "https://logo.clearbit.com/certainteed.com" },
-  { name: "Atlas Roofing", category: "Roofing Systems", url: "https://www.atlasroofing.com", logo: "https://logo.clearbit.com/atlasroofing.com" },
-  { name: "IKO", category: "Roofing Products", url: "https://www.iko.com", logo: "https://logo.clearbit.com/iko.com" },
-  { name: "TAMKO", category: "Building Products", url: "https://www.tamko.com", logo: "https://logo.clearbit.com/tamko.com" },
-  { name: "James Hardie", category: "Siding & Cladding", url: "https://www.jameshardie.com", logo: "https://logo.clearbit.com/jameshardie.com" },
-  { name: "Velux", category: "Skylights & Roof Windows", url: "https://www.velux.com", logo: "https://logo.clearbit.com/velux.com" },
+  { name: "Owens Corning", category: "Roofing & Insulation", url: "https://www.owenscorning.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Owens_Corning_logo.svg/320px-Owens_Corning_logo.svg.png" },
+  { name: "CertainTeed", category: "Roofing & Siding", url: "https://www.certainteed.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/CertainTeed_logo.svg/320px-CertainTeed_logo.svg.png" },
+  { name: "Atlas Roofing", category: "Roofing Systems", url: "https://www.atlasroofing.com", logo: "https://www.atlasroofing.com/images/atlas-logo.png" },
+  { name: "IKO", category: "Roofing Products", url: "https://www.iko.com", logo: "https://www.iko.com/na/wp-content/themes/iko/images/iko-logo.svg" },
+  { name: "TAMKO", category: "Building Products", url: "https://www.tamko.com", logo: "https://www.tamko.com/wp-content/uploads/tamko-logo.png" },
+  { name: "James Hardie", category: "Siding & Cladding", url: "https://www.jameshardie.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/James_Hardie_logo.svg/320px-James_Hardie_logo.svg.png" },
+  { name: "Velux", category: "Skylights & Roof Windows", url: "https://www.velux.com", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/VELUX_logo.svg/320px-VELUX_logo.svg.png" },
 ];
+
+function PartnerCard({ p }: { p: typeof PARTNERS[0] }) {
+  const [imgError, setImgError] = useState(false);
+  return (
+    <a
+      href={p.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex-shrink-0 w-[60vw] sm:w-56 lg:w-64 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent p-6 flex flex-col items-center justify-center gap-4 hover:border-[#D71920]/50 transition-colors group"
+    >
+      <div className="h-16 w-full flex items-center justify-center bg-white rounded-xl px-4 py-2">
+        {!imgError ? (
+          <img
+            src={p.logo}
+            alt={p.name}
+            className="max-h-10 max-w-full object-contain"
+            onError={() => setImgError(true)}
+          />
+        ) : (
+          <span className="text-gray-800 font-bold text-sm text-center leading-tight">{p.name}</span>
+        )}
+      </div>
+      <div className="text-center">
+        <p className="text-white font-bold text-sm group-hover:text-[#D71920] transition-colors">{p.name}</p>
+        <p className="text-white/40 text-xs mt-1">{p.category}</p>
+      </div>
+    </a>
+  );
+}
 
 export default function Partners() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -80,30 +109,7 @@ export default function Partners() {
             className="flex gap-4 overflow-x-auto scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           >
             {[...PARTNERS, ...PARTNERS].map((p, i) => (
-              <a
-                key={i}
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-shrink-0 w-[60vw] sm:w-56 lg:w-64 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent p-6 flex flex-col items-center justify-center gap-4 hover:border-[#D71920]/50 transition-colors group"
-              >
-                <div className="h-16 w-full flex items-center justify-center bg-white rounded-xl px-4 py-2">
-                  <img
-                    src={p.logo}
-                    alt={p.name}
-                    className="max-h-10 max-w-full object-contain"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                      (e.target as HTMLImageElement).nextElementSibling?.classList.remove("hidden");
-                    }}
-                  />
-                  <span className="hidden text-[#D71920] font-extrabold text-lg">{p.name.charAt(0)}</span>
-                </div>
-                <div className="text-center">
-                  <p className="text-white font-bold text-sm group-hover:text-[#D71920] transition-colors">{p.name}</p>
-                  <p className="text-white/40 text-xs mt-1">{p.category}</p>
-                </div>
-              </a>
+              <PartnerCard key={i} p={p} />
             ))}
           </div>
 
