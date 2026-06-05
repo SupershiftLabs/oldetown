@@ -11,6 +11,7 @@ const NAV = [
   { label: "Projects", href: "#projects" },
   { label: "Reviews", href: "#reviews" },
   { label: "Service Areas", href: "#areas" },
+  { label: "About", href: "#about" },
 ];
 
 export default function Header() {
