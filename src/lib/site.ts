@@ -34,13 +34,7 @@ export const CITIES = [
   "Willard", "Strafford", "Rogersville", "Fair Grove", "Bolivar", "Branson",
 ];
 
-export const REVIEWS = [
-  { name: "Derek M.", city: "Nixa, MO", text: "Hail tore up our roof in May. Olde Town handled the whole insurance claim and had us a new roof in two weeks. No nonsense, no chasing them down." },
-  { name: "Sara T.", city: "Ozark, MO", text: "Most professional contractor we've ever worked with. The crew left our yard cleaner than they found it. Genuinely impressed." },
-  { name: "James R.", city: "Springfield, MO", text: "Got three estimates. Olde Town was the only one that actually explained what they were doing and why. Easy decision." },
-  { name: "Megan P.", city: "Republic, MO", text: "Storm came through and they had someone out the next morning to tarp it. Saved our ceilings. These guys are the real deal." },
-  { name: "Carl B.", city: "Branson, MO", text: "Metal roof looks incredible and the communication was perfect start to finish. Worth every penny." },
-];
+export const REVIEWS: { name: string; city: string; text: string }[] = [];
 
 export const TRUST = [
   "Licensed & Insured",
