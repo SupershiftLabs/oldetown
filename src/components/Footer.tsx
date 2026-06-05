@@ -8,8 +8,8 @@ export default function Footer() {
   const { openModal } = useLead();
   return (
     <footer className="bg-[#080808] border-t border-white/10 pt-16 pb-8">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid md:grid-cols-4 gap-10">
-        <div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+        <div className="col-span-2 md:col-span-1">
           <Logo />
           <p className="mt-4 text-sm text-white/50 max-w-xs">
             The premium roofing and storm restoration company serving Springfield and Southwest Missouri.
@@ -55,7 +55,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="col-span-2 md:col-span-1">
           <h4 className="text-white font-semibold mb-4 text-sm">Get Started</h4>
           <p className="text-sm text-white/50 mb-4">Free inspection. No pressure. No nonsense.</p>
           <button onClick={() => openModal()} className="w-full bg-[#D71920] hover:bg-[#b3141a] text-white font-semibold py-3 rounded-full text-sm">

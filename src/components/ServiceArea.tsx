@@ -34,7 +34,7 @@ export default function ServiceArea() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative aspect-square rounded-3xl border border-white/10 bg-[#0d0d0d] overflow-hidden"
+          className="relative aspect-video sm:aspect-square rounded-3xl border border-white/10 bg-[#0d0d0d] overflow-hidden"
         >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3136.5635819547326!2d-93.28289!3d37.20897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf62d38b6d8ec3%3A0x8e8e8e8e8e8e8e8e!2s2023%20E%20Kearney%20St%20Suite%20102%2C%20Springfield%2C%20MO!5e0!3m2!1sen!2sus!4v1234567890"

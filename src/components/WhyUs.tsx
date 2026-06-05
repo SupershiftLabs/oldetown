@@ -12,7 +12,7 @@ const POINTS = [
 
 export default function WhyUs() {
   return (
-    <section id="why" className="py-24 bg-[#0d0d0d]">
+    <section id="why" className="py-16 sm:py-24 bg-[#0d0d0d]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-14 items-center">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -37,7 +37,7 @@ export default function WhyUs() {
 
         <div>
           <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mb-3">Why Olde Town</p>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
             Built for Ozark weather. Built for homeowners.
           </h2>
           <p className="text-white/60 text-lg mb-8">

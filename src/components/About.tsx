@@ -49,23 +49,24 @@ export default function About() {
               <div className="absolute -top-8 -right-8 w-32 h-32 bg-[#D71920]/10 rounded-full blur-3xl" />
               <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-[#D71920]/10 rounded-full blur-3xl" />
               
-              <div className="relative z-10 space-y-8">
+              <div className="relative z-10 grid grid-cols-2 gap-6">
                 <div>
-                  <div className="text-5xl font-extrabold text-[#D71920] mb-2">20+</div>
-                  <p className="text-white/80 text-lg">Years of experience</p>
+                  <div className="text-4xl font-extrabold text-[#D71920] mb-1">20+</div>
+                  <p className="text-white/70 text-sm">Years of experience</p>
                 </div>
-                
-                <div className="border-t border-white/10 pt-8">
-                  <div className="text-4xl font-extrabold text-white mb-2">6</div>
-                  <p className="text-white/80 text-lg">States served</p>
+                <div>
+                  <div className="text-4xl font-extrabold text-white mb-1">6</div>
+                  <p className="text-white/70 text-sm">States served</p>
                 </div>
-                
-                <div className="border-t border-white/10 pt-8">
-                  <div className="text-4xl font-extrabold text-white mb-2">2004</div>
-                  <p className="text-white/80 text-lg">Founded by Sean Vogler</p>
+                <div>
+                  <div className="text-4xl font-extrabold text-white mb-1">2004</div>
+                  <p className="text-white/70 text-sm">Founded by Sean Vogler</p>
                 </div>
-
-                <div className="border-t border-white/10 pt-8">
+                <div>
+                  <div className="text-4xl font-extrabold text-white mb-1">5,000+</div>
+                  <p className="text-white/70 text-sm">Roofs completed</p>
+                </div>
+                <div className="col-span-2 border-t border-white/10 pt-4">
                   <p className="text-white/60 text-sm italic">
                     "Every project is built to last, and every customer is treated like family."
                   </p>

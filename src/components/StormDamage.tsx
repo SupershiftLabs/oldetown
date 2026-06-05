@@ -30,7 +30,7 @@ export default function StormDamage() {
 
         <div className="relative">
           <div className="hidden lg:block absolute top-7 left-0 right-0 h-px bg-white/10" />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 [&>*:last-child]:col-span-2 sm:[&>*:last-child]:col-span-1">
             {STEPS.map((s, i) => (
               <motion.div
                 key={s.title}
@@ -55,7 +55,7 @@ export default function StormDamage() {
 
         <button
           onClick={() => openModal("Storm Damage Restoration")}
-          className="mt-14 bg-[#D71920] hover:bg-[#b3141a] text-white font-semibold px-8 py-4 rounded-full transition-transform hover:scale-[1.03]"
+          className="mt-10 w-full sm:w-auto bg-[#D71920] hover:bg-[#b3141a] text-white font-semibold px-8 py-4 rounded-full transition-transform hover:scale-[1.03] text-sm sm:text-base"
         >
           Start My Reconstruction Portion of My Storm Claim
         </button>
