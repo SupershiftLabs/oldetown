@@ -65,8 +65,8 @@ export default function Header() {
           </button>
         </div>
 
-        <button className="lg:hidden text-white" onClick={() => setMenu(!menu)} aria-label="Menu">
-          {menu ? <X /> : <Menu />}
+        <button className="lg:hidden text-white p-1" onClick={() => setMenu(!menu)} aria-label="Menu">
+          {menu ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
         </button>
       </div>
 
