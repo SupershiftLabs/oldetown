@@ -4,7 +4,7 @@ export const BOOKING_URL =
   "https://famous.ai/api/crm/6a220c8e02b9295900ce46da/calendar/public?calendarId=219b3a6e-bd39-46c4-8cc5-b079655a86b8&view=booking";
 
 export const IMAGES = {
-  hero: "https://d64gsuwffb70l.cloudfront.net/6a220c8e02b9295900ce46da_1780616429515_82d6d282.jpg",
+  hero: "/FDA2CF45-0145-459D-B71F-4EDA9A495CC3.PNG",
   work1: "https://d64gsuwffb70l.cloudfront.net/6a220c8e02b9295900ce46da_1780616451427_5f49e8cb.png",
   work2: "https://d64gsuwffb70l.cloudfront.net/6a220c8e02b9295900ce46da_1780616447940_63027577.jpg",
   work3: "https://d64gsuwffb70l.cloudfront.net/6a220c8e02b9295900ce46da_1780616448552_8c4414da.jpg",
