@@ -6,7 +6,7 @@ import { useLead } from "./LeadContext";
 const STEPS = [
   { icon: Search, title: "Free Inspection", text: "We climb the roof and document every hit, lift, and bruise — no guessing." },
   { icon: FileText, title: "Documentation", text: "Photos, measurements, and a damage report built for your insurance carrier." },
-  { icon: ShieldCheck, title: "Insurance Support", text: "We meet your adjuster on-site and fight for the full scope you're owed." },
+  { icon: ShieldCheck, title: "Insurance Support", text: "We meet your adjuster on-site and negotiate for the full scope you're owed." },
   { icon: Hammer, title: "Repair or Replace", text: "Premium materials installed by a clean, professional, local crew." },
   { icon: ClipboardCheck, title: "Final Walkthrough", text: "We don't leave until you've signed off and the site is spotless." },
 ];
@@ -21,7 +21,7 @@ export default function StormDamage() {
         <div className="max-w-3xl mb-16">
           <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mb-3">Storm Restoration</p>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Storm damage? We'll handle the roof <span className="text-[#D71920]">and</span> the insurance process.
+            Storm damage? We'll handle the roof <span className="text-[#D71920]">and</span> the rest of the construction.
           </h2>
           <p className="mt-4 text-lg text-white/60">
             Missouri storms don't care how old your roof is. When the hail hits, we're ready — start to finish.
@@ -57,7 +57,7 @@ export default function StormDamage() {
           onClick={() => openModal("Storm Damage Restoration")}
           className="mt-14 bg-[#D71920] hover:bg-[#b3141a] text-white font-semibold px-8 py-4 rounded-full transition-transform hover:scale-[1.03]"
         >
-          Start My Storm Claim
+          Start My Reconstruction Portion of My Storm Claim
         </button>
       </div>
     </section>

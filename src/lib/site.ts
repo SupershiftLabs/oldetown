@@ -19,8 +19,8 @@ export const IMAGES = {
 
 export const SERVICES = [
   { slug: "roof-replacement", title: "Roof Replacement", icon: "Home", desc: "Full tear-off and replacement built to outlast the next storm season." },
-  { slug: "roof-repair", title: "Roof Repair", icon: "Wrench", desc: "Fast, surgical repairs that stop leaks before they wreck your home." },
-  { slug: "storm-restoration", title: "Storm Damage Restoration", icon: "CloudLightning", desc: "Hail and wind happen. We handle the roof and the insurance fight." },
+  { slug: "roof-repair", title: "Roof Repair", icon: "Wrench", desc: "Fast, surgical repairs that stop leaks before they wreck your home, or commercial property." },
+  { slug: "storm-restoration", title: "Storm Damage Restoration", icon: "CloudLightning", desc: "Restoration specialists that will get your property back into pre-loss condition." },
   { slug: "insurance-claims", title: "Insurance Claim Assistance", icon: "FileCheck", desc: "We document, file, and advocate so you get what you're owed." },
   { slug: "metal-roofing", title: "Metal Roofing", icon: "Layers", desc: "Standing seam systems engineered for 50+ years of Ozark weather." },
   { slug: "commercial", title: "Commercial Roofing", icon: "Building2", desc: "TPO, EPDM, and metal systems for businesses across SW Missouri." },
