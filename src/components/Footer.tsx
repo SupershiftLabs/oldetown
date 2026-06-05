@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import { PHONE, PHONE_TEL, SERVICES, CITIES } from "@/lib/site";
 import { useLead } from "./LeadContext";
@@ -65,7 +66,10 @@ export default function Footer() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/40">
         <span>© {new Date().getFullYear()} Olde Town Roofing. Licensed & Insured. All rights reserved.</span>
-        <span>Built for Ozark weather.</span>
+        <span className="flex gap-4">
+          <Link to="/terms" className="hover:text-white/70">Terms & Conditions</Link>
+          <Link to="/privacy" className="hover:text-white/70">Privacy Policy</Link>
+        </span>
       </div>
     </footer>
   );

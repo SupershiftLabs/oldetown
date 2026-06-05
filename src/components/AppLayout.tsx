@@ -13,8 +13,8 @@ import FinalCTA from "./FinalCTA";
 import Footer from "./Footer";
 import StickyMobileCTA from "./StickyMobileCTA";
 import LeadModal from "./LeadModal";
-import ExitIntent from "./ExitIntent";
 import FloatingButton from "./FloatingButton";
+import CookieBanner from "./CookieBanner";
 
 export default function AppLayout() {
   return (
@@ -46,8 +46,8 @@ export default function AppLayout() {
         <Footer />
         <StickyMobileCTA />
         <LeadModal />
-        <ExitIntent />
         <FloatingButton />
+        <CookieBanner />
       </div>
     </LeadProvider>
   );
