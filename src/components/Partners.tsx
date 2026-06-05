@@ -1,19 +1,93 @@
 import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const favicon = (domain: string) =>
-  `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.${domain}&size=256`;
+function GafLogo() {
+  return (
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" className="h-14 w-14">
+      <rect width="80" height="80" rx="4" fill="#003087" />
+      <text x="40" y="52" fontFamily="Arial Black, Arial" fontSize="34" fontWeight="900" textAnchor="middle" fill="white">GAF</text>
+    </svg>
+  );
+}
+
+function GafMasterEliteLogo() {
+  return (
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" className="h-14 w-14">
+      <rect width="80" height="80" rx="4" fill="#003087" />
+      <text x="40" y="34" fontFamily="Arial Black, Arial" fontSize="20" fontWeight="900" textAnchor="middle" fill="white">GAF</text>
+      <text x="40" y="52" fontFamily="Arial, sans-serif" fontSize="9" fontWeight="bold" textAnchor="middle" fill="#C8A951">MASTER ELITE</text>
+      <rect x="10" y="56" width="60" height="1.5" fill="#C8A951" />
+      <text x="40" y="70" fontFamily="Arial, sans-serif" fontSize="7" textAnchor="middle" fill="#C8A951">CERTIFIED CONTRACTOR</text>
+    </svg>
+  );
+}
+
+function GafGoldenPledgeLogo() {
+  return (
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" className="h-14 w-14">
+      <rect width="80" height="80" rx="4" fill="#003087" />
+      <text x="40" y="34" fontFamily="Arial Black, Arial" fontSize="20" fontWeight="900" textAnchor="middle" fill="white">GAF</text>
+      <text x="40" y="52" fontFamily="Arial, sans-serif" fontSize="9" fontWeight="bold" textAnchor="middle" fill="#C8A951">GOLDEN PLEDGE</text>
+      <rect x="10" y="56" width="60" height="1.5" fill="#C8A951" />
+      <text x="40" y="70" fontFamily="Arial, sans-serif" fontSize="7" textAnchor="middle" fill="#C8A951">WARRANTY</text>
+    </svg>
+  );
+}
+
+function IkoLogo() {
+  return (
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" className="h-14 w-14">
+      <rect width="80" height="80" rx="4" fill="#002D72" />
+      <polygon points="40,8 52,28 28,28" fill="#E31837" />
+      <text x="40" y="62" fontFamily="Arial Black, Arial" fontSize="30" fontWeight="900" textAnchor="middle" fill="white">IKO</text>
+    </svg>
+  );
+}
+
+function JamesHardieLogo() {
+  return (
+    <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" className="h-14 w-14">
+      <rect width="80" height="80" rx="4" fill="#CC0000" />
+      <text x="40" y="38" fontFamily="Arial Black, Arial" fontSize="22" fontWeight="900" textAnchor="middle" fill="white">JAMES</text>
+      <text x="40" y="62" fontFamily="Arial Black, Arial" fontSize="22" fontWeight="900" textAnchor="middle" fill="white">HARDIE</text>
+    </svg>
+  );
+}
 
 const PARTNERS = [
-  { name: "GAF", category: "Roofing Systems", url: "https://www.gaf.com", logo: favicon("gaf.com") },
-  { name: "GAF Master Elite", category: "Certified Contractor Program", url: "https://www.gaf.com/en-us/roofing-contractors/find-a-contractor/master-elite", logo: favicon("gaf.com") },
-  { name: "GAF Golden Pledge", category: "System Plus Warranty", url: "https://www.gaf.com/en-us/roofing-systems/residential/warranties/golden-pledge-ltd-warranty", logo: favicon("gaf.com") },
-  { name: "IKO", category: "Roofing Products", url: "https://www.iko.com", logo: favicon("iko.com") },
-  { name: "James Hardie", category: "Siding & Cladding", url: "https://www.jameshardie.com", logo: favicon("jameshardie.com") },
+  {
+    name: "GAF",
+    category: "Roofing Systems",
+    url: "https://www.gaf.com",
+    Logo: GafLogo,
+  },
+  {
+    name: "GAF Master Elite",
+    category: "Certified Contractor Program",
+    url: "https://www.gaf.com/en-us/roofing-contractors/find-a-contractor/master-elite",
+    Logo: GafMasterEliteLogo,
+  },
+  {
+    name: "GAF Golden Pledge",
+    category: "System Plus Warranty",
+    url: "https://www.gaf.com/en-us/roofing-systems/residential/warranties/golden-pledge-ltd-warranty",
+    Logo: GafGoldenPledgeLogo,
+  },
+  {
+    name: "IKO",
+    category: "Roofing Products",
+    url: "https://www.iko.com",
+    Logo: IkoLogo,
+  },
+  {
+    name: "James Hardie",
+    category: "Siding & Cladding",
+    url: "https://www.jameshardie.com",
+    Logo: JamesHardieLogo,
+  },
 ];
 
 function PartnerCard({ p }: { p: typeof PARTNERS[0] }) {
-  const [imgError, setImgError] = useState(false);
   return (
     <a
       href={p.url}
@@ -22,16 +96,7 @@ function PartnerCard({ p }: { p: typeof PARTNERS[0] }) {
       className="flex-shrink-0 w-[60vw] sm:w-56 lg:w-64 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent p-6 flex flex-col items-center justify-center gap-4 hover:border-[#D71920]/50 transition-colors group"
     >
       <div className="h-20 w-20 rounded-full bg-white flex items-center justify-center overflow-hidden shrink-0">
-        {!imgError ? (
-          <img
-            src={p.logo}
-            alt={p.name}
-            className="h-14 w-14 object-contain"
-            onError={() => setImgError(true)}
-          />
-        ) : (
-          <span className="text-gray-800 font-bold text-sm text-center leading-tight">{p.name}</span>
-        )}
+        <p.Logo />
       </div>
       <div className="text-center">
         <p className="text-white font-bold text-sm group-hover:text-[#D71920] transition-colors">{p.name}</p>
