@@ -21,12 +21,12 @@ function PartnerCard({ p }: { p: typeof PARTNERS[0] }) {
       rel="noopener noreferrer"
       className="flex-shrink-0 w-[60vw] sm:w-56 lg:w-64 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent p-6 flex flex-col items-center justify-center gap-4 hover:border-[#D71920]/50 transition-colors group"
     >
-      <div className="h-16 w-full flex items-center justify-center bg-white rounded-xl px-4 py-2">
+      <div className="h-20 w-full flex items-center justify-center bg-white rounded-xl overflow-hidden">
         {!imgError ? (
           <img
             src={p.logo}
             alt={p.name}
-            className="max-h-10 max-w-full object-contain"
+            className="w-full h-full object-cover"
             onError={() => setImgError(true)}
           />
         ) : (
