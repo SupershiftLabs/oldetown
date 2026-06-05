@@ -76,7 +76,7 @@ export default function PrivacyPolicy() {
               <li>Request deletion of your information (subject to legal obligations)</li>
               <li>Opt out of marketing communications at any time</li>
             </ul>
-            <p className="mt-3">To exercise any of these rights, contact us at <a href="mailto:info@oldetownroofing.com" className="text-[#D71920] hover:underline">info@oldetownroofing.com</a>.</p>
+            <p className="mt-3">To exercise any of these rights, contact us at <a href="mailto:seanv@oldetownroofing.com" className="text-[#D71920] hover:underline">seanv@oldetownroofing.com</a>.</p>
           </section>
 
           <section>
@@ -95,7 +95,7 @@ export default function PrivacyPolicy() {
             <div className="mt-3 space-y-1">
               <p>Olde Town Roofing</p>
               <p>2023 E Kearney Street Suite 102, Springfield, MO</p>
-              <p><a href="mailto:info@oldetownroofing.com" className="text-[#D71920] hover:underline">info@oldetownroofing.com</a></p>
+              <p><a href="mailto:seanv@oldetownroofing.com" className="text-[#D71920] hover:underline">seanv@oldetownroofing.com</a></p>
             </div>
           </section>
 

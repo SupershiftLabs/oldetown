@@ -5,7 +5,7 @@ import { IMAGES } from "@/lib/site";
 const POINTS = [
   { icon: Receipt, title: "Transparent Estimates", text: "Itemized, honest pricing. You'll know exactly what you're paying for and why." },
   { icon: MessageSquare, title: "Exceptional Communication", text: "Real updates from real people. You're never left wondering what's next." },
-  { icon: Gem, title: "Premium Materials", text: "We install the best — backed by manufacturer-certified workmanship." },
+  { icon: Gem, title: "GAF Masters Elite", text: "We did the research over the past 22 years and you benefit from the knowledge that research provides." },
   { icon: Sparkles, title: "Clean Job Sites", text: "Magnetic nail sweeps, daily cleanup, and a yard left better than we found it." },
   { icon: Award, title: "Strong Warranties", text: "Labor and material warranties that actually mean something for decades." },
 ];

@@ -68,7 +68,7 @@ export default function TermsAndConditions() {
             <div className="mt-3 space-y-1">
               <p>Olde Town Roofing</p>
               <p>2023 E Kearney Street Suite 102, Springfield, MO</p>
-              <p><a href="mailto:info@oldetownroofing.com" className="text-[#D71920] hover:underline">info@oldetownroofing.com</a></p>
+              <p><a href="mailto:seanv@oldetownroofing.com" className="text-[#D71920] hover:underline">seanv@oldetownroofing.com</a></p>
             </div>
           </section>
 

@@ -16,7 +16,7 @@ export default function Footer() {
           </p>
           <div className="mt-5 space-y-2 text-sm text-white/60">
             <a href={PHONE_TEL} className="flex items-center gap-2 hover:text-white"><Phone className="h-4 w-4 text-[#D71920]" /> {PHONE}</a>
-            <a href="mailto:info@oldetownroofing.com" className="flex items-center gap-2 hover:text-white"><Mail className="h-4 w-4 text-[#D71920]" /> info@oldetownroofing.com</a>
+            <a href="mailto:seanv@oldetownroofing.com" className="flex items-center gap-2 hover:text-white"><Mail className="h-4 w-4 text-[#D71920]" /> seanv@oldetownroofing.com</a>
             <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[#D71920]" /> 2023 E Kearney Street Suite 102</div>
           </div>
           <div className="mt-6 flex gap-4">

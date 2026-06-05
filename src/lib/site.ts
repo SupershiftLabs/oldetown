@@ -18,6 +18,7 @@ export const IMAGES = {
 };
 
 export const SERVICES = [
+  { slug: "financing", title: "100% Financing Available", icon: "CreditCard", desc: "From behavior-based financing rates to no payment and no interest for up to 36 months, same as cash for up to 12 months, and deductible financing for when that insurance deductible is just a little more than you expected." },
   { slug: "roof-replacement", title: "Roof Replacement", icon: "Home", desc: "Full tear-off and replacement built to outlast the next storm season." },
   { slug: "roof-repair", title: "Roof Repair", icon: "Wrench", desc: "Fast, surgical repairs that stop leaks before they wreck your home, or commercial property." },
   { slug: "storm-restoration", title: "Storm Damage Restoration", icon: "CloudLightning", desc: "Restoration specialists that will get your property back into pre-loss condition." },

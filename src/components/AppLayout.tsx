@@ -15,6 +15,7 @@ import StickyMobileCTA from "./StickyMobileCTA";
 import LeadModal from "./LeadModal";
 import FloatingButton from "./FloatingButton";
 import CookieBanner from "./CookieBanner";
+import Partners from "./Partners";
 
 export default function AppLayout() {
   return (
@@ -40,6 +41,7 @@ export default function AppLayout() {
           <Reviews />
           <ServiceArea />
           <About />
+          <Partners />
           <FinalCTA />
         </main>
         <Footer />

@@ -16,12 +16,20 @@ export default function Reviews() {
         <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-2">
           5 stars, earned the hard way.
         </h2>
-        <div className="flex items-center justify-center gap-1 mb-12">
+        <div className="flex items-center justify-center gap-1 mb-4">
           {Array.from({ length: 5 }).map((_, k) => (
             <Star key={k} className="h-5 w-5 fill-[#D71920] text-[#D71920]" />
           ))}
           <span className="ml-2 text-white/60 text-sm">Verified Google Reviews</span>
         </div>
+        <a
+          href="https://share.google/WPIYznW05E8LxvMXP"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 mb-12 text-sm font-semibold text-[#D71920] hover:text-white border border-[#D71920]/40 hover:border-white/30 px-5 py-2 rounded-full transition-colors"
+        >
+          Read Our Google Reviews
+        </a>
 
         <div className="relative min-h-[230px]">
           <Quote className="h-12 w-12 text-[#D71920]/30 mx-auto mb-6" />

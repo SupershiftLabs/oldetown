@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import {
-  Home, Wrench, CloudLightning, FileCheck, Layers, Building2, PanelTop, Droplets, ArrowRight,
+  Home, Wrench, CloudLightning, FileCheck, Layers, Building2, PanelTop, Droplets, CreditCard, ArrowRight,
 } from "lucide-react";
 import { SERVICES } from "@/lib/site";
 import { useLead } from "./LeadContext";
 
 const ICONS: Record<string, any> = {
-  Home, Wrench, CloudLightning, FileCheck, Layers, Building2, PanelTop, Droplets,
+  Home, Wrench, CloudLightning, FileCheck, Layers, Building2, PanelTop, Droplets, CreditCard,
 };
 
 export default function Services() {
@@ -24,8 +24,38 @@ export default function Services() {
           </p>
         </div>
 
+        {/* Financing card — full-width featured row */}
+        {(() => {
+          const f = SERVICES[0];
+          const Icon = ICONS[f.icon];
+          return (
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="group relative rounded-2xl border border-[#D71920]/40 bg-gradient-to-r from-[#D71920]/10 to-transparent p-6 sm:p-8 hover:border-[#D71920]/70 transition-colors mb-4 flex flex-col sm:flex-row sm:items-center gap-6"
+            >
+              <div className="h-14 w-14 rounded-xl bg-[#D71920]/20 flex items-center justify-center shrink-0 group-hover:bg-[#D71920] transition-colors">
+                <Icon className="h-7 w-7 text-[#D71920] group-hover:text-white transition-colors" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-white">{f.title}</h3>
+                <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-3xl">{f.desc}</p>
+              </div>
+              <button
+                onClick={() => openModal(f.title)}
+                className="shrink-0 bg-[#D71920] hover:bg-[#b3141a] text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors"
+              >
+                Learn More
+              </button>
+            </motion.div>
+          );
+        })()}
+
+        {/* Remaining service cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {SERVICES.map((s, i) => {
+          {SERVICES.slice(1).map((s, i) => {
             const Icon = ICONS[s.icon];
             return (
               <motion.div
