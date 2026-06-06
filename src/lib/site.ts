@@ -22,11 +22,11 @@ export const SERVICES = [
   { slug: "roof-replacement", title: "Roof Replacement", icon: "Home", desc: "Full tear-off and replacement built to outlast the next storm season." },
   { slug: "roof-repair", title: "Roof Repair", icon: "Wrench", desc: "Fast, surgical repairs that stop leaks before they wreck your home, or commercial property." },
   { slug: "storm-restoration", title: "Storm Damage Restoration", icon: "CloudLightning", desc: "Restoration specialists that will get your property back into pre-loss condition." },
-  { slug: "insurance-claims", title: "Insurance Claim Assistance", icon: "FileCheck", desc: "We document, file, and advocate so you get what you're owed." },
-  { slug: "metal-roofing", title: "Metal Roofing", icon: "Layers", desc: "Standing seam systems engineered for 50+ years of Ozark weather." },
-  { slug: "commercial", title: "Commercial Roofing", icon: "Building2", desc: "TPO, EPDM, and metal systems for businesses across SW Missouri." },
-  { slug: "siding", title: "Siding Installation", icon: "PanelTop", desc: "Impact-rated siding that protects and transforms your exterior." },
-  { slug: "gutters", title: "Gutter Systems", icon: "Droplets", desc: "Seamless gutters and guards that move water away from your foundation." },
+  { slug: "insurance-claims", title: "Insurance Claim Assistance", icon: "FileCheck", desc: "We document, file, and advocate so you get what you're owed.", tagline: "$0 out of pocket until the job is complete." },
+  { slug: "composite-roofing", title: "Composite Roofing", icon: "Layers", desc: "We specialize in DaVinci Composite roofing — when you want the best, trust us with the install. Pair it with copper gutters and strategically placed decorative snow guards to truly showcase the finest roofing product on the market today." },
+  { slug: "commercial", title: "Commercial Roofing", icon: "Building2", desc: "TPO, EPDM, and metal conversion systems for businesses across SW Missouri." },
+  { slug: "siding", title: "Siding Installation", icon: "PanelTop", desc: "Fire and pest resistant siding to beautify and protect your home." },
+  { slug: "gutters", title: "Gutter Systems", icon: "Droplets", desc: "Seamless gutters and guards that move water away from your foundation. And when you want the best of the best, we install copper gutters and the newest style of chain-style downspouts." },
 ];
 
 export const CITIES = [

@@ -20,16 +20,16 @@ export default function Footer() {
             <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[#D71920]" /> 2023 E Kearney Street Suite 102</div>
           </div>
           <div className="mt-6 flex gap-4">
-            <a href="#" className="text-white/50 hover:text-[#D71920] transition-colors" aria-label="Facebook">
+            <a href="https://www.facebook.com/oldetownroofing" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-[#D71920] transition-colors" aria-label="Facebook">
               <Facebook className="h-5 w-5" />
             </a>
-            <a href="#" className="text-white/50 hover:text-[#D71920] transition-colors" aria-label="Instagram">
+            <a href="https://www.instagram.com/oldetownroofing" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-[#D71920] transition-colors" aria-label="Instagram">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="#" className="text-white/50 hover:text-[#D71920] transition-colors" aria-label="Twitter">
+            <a href="https://www.twitter.com/oldetownroofing" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-[#D71920] transition-colors" aria-label="Twitter">
               <Twitter className="h-5 w-5" />
             </a>
-            <a href="#" className="text-white/50 hover:text-[#D71920] transition-colors" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/oldetownroofing" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-[#D71920] transition-colors" aria-label="LinkedIn">
               <Linkedin className="h-5 w-5" />
             </a>
           </div>

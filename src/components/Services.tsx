@@ -71,6 +71,11 @@ export default function Services() {
                 </div>
                 <h3 className="text-lg font-bold text-white">{s.title}</h3>
                 <p className="mt-2 text-sm text-white/55 leading-relaxed">{s.desc}</p>
+                {s.tagline && (
+                  <p className="mt-3 inline-block text-xs font-semibold text-[#D71920] bg-[#D71920]/10 border border-[#D71920]/30 rounded-full px-3 py-1">
+                    {s.tagline}
+                  </p>
+                )}
                 <button
                   onClick={() => openModal(s.title)}
                   className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#D71920] hover:gap-2.5 transition-all"
