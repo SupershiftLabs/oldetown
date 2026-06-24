@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { LeadProvider } from "./LeadContext";
+import { useLead } from "./LeadContext";
 import Header from "./Header";
 import Hero from "./Hero";
 import TrustStrip from "./TrustStrip";
@@ -17,6 +19,16 @@ import FloatingButton from "./FloatingButton";
 import CookieBanner from "./CookieBanner";
 import Partners from "./Partners";
 
+function ContactAutoOpen() {
+  const { openModal } = useLead();
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).has("contact")) {
+      openModal();
+    }
+  }, []);
+  return null;
+}
+
 export default function AppLayout() {
   return (
     <LeadProvider>
@@ -30,6 +42,7 @@ export default function AppLayout() {
           `,
         }}
       >
+        <ContactAutoOpen />
         <Header />
         <main>
           <Hero />

@@ -6,7 +6,6 @@ const SHOTS = [
   "/IMG_7064.jpg", "/IMG_7065.jpg", "/IMG_7066.jpg", "/IMG_7067.jpg",
   "/IMG_7068.jpg", "/IMG_7069.jpg", "/IMG_7070.jpg", "/IMG_7071.jpg",
   "/IMG_7072.jpg", "/IMG_7073.jpg", "/IMG_7074.jpg", "/IMG_7075.jpg",
-  "/IMG_9282.JPG", "/IMG_9283.JPG",
 ];
 
 export default function Gallery() {
@@ -51,10 +50,12 @@ export default function Gallery() {
 
         <div className="mb-12">
           <div className="relative w-full h-[360px] sm:h-[460px] rounded-2xl overflow-hidden border border-white/10 group cursor-pointer hover:border-[#D71920]/50 transition-colors">
-            <img 
-              src={selectedImage} 
-              alt="Olde Town Roofing completed project — Springfield, MO"
+            <img
+              src={selectedImage}
+              alt="Olde Town Roofing completed project — Davenport, IA"
               className="absolute inset-0 w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
             />
           </div>
         </div>
@@ -78,8 +79,10 @@ export default function Gallery() {
                 <div className="relative overflow-hidden bg-[#0d0d0d] aspect-video">
                   <img
                     src={src}
-                    alt={`Olde Town Roofing project ${i + 1} — Southwest Missouri`}
+                    alt={`Olde Town Roofing project ${i + 1} — Quad Cities Iowa`}
                     className="w-full h-full object-cover group-hover/card:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>

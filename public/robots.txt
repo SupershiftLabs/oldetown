@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://springfieldroofpro.com/sitemap.xml
+Sitemap: https://oldetownroofing.com/sitemap.xml

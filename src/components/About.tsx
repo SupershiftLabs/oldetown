@@ -17,19 +17,19 @@ export default function About() {
           <div>
             <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mb-3">Our Story</p>
             <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-              Built on honesty, respect, and expert craftsmanship.
+              Two decades of getting it right — and still family owned.
             </h2>
             <p className="text-white/60 text-lg mb-6">
-              Founded in 2004 by Sean Vogler, Olde Town Roofing was built on a principle that's become rare in this industry: do the work right, price it honestly, and answer for it when it's done.
+              Olde Town Roofing was started in 2004 by Sean Vogler on one straightforward idea: do the job right, charge a fair price, and be there when something needs to get fixed.
             </p>
             <p className="text-white/60 text-lg mb-6">
-              22 years of being a family owned business — not a private equity firm. We price to live our lives, not to make yet another hedge fund manager a multimillionaire. Most companies in our position have already sold out to private equity. We haven't, and we don't plan to.
+              Two decades later, we're still family owned — not acquired, not flipped, not folded into a private equity portfolio. The people who give you your estimate are the same people accountable to you when the job is done.
             </p>
             <p className="text-white/60 text-lg mb-8">
-              That means the person who gives you your estimate is accountable to you — not to a board of investors in another state. It means we stand behind our work because our name is on it, not because a warranty department will handle the call.
+              That's not a marketing line. It's how we've operated since day one, and we're not changing it.
             </p>
             <p className="text-white/60 text-lg mb-8 font-semibold">
-              At Olde Town Roofing, every project is built to last, and every customer is treated like family.
+              Every roof we put on carries our name. We intend to keep earning it.
             </p>
             <ul className="space-y-3">
               {features.map((feature, i) => (

@@ -20,7 +20,26 @@ export default function LeadModal() {
       setPhotoUrls([]);
       setDone(false);
       setErr("");
+      const scrollY = window.scrollY;
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+      document.body.dataset.scrollY = String(scrollY);
+    } else {
+      const scrollY = Number(document.body.dataset.scrollY || 0);
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollY);
     }
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+    };
   }, [open, prefillService]);
 
   const submit = async (e: React.FormEvent) => {
@@ -39,12 +58,13 @@ export default function LeadModal() {
         <motion.div
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
           className="fixed inset-0 z-[70] flex items-end sm:items-center justify-center bg-black/80 backdrop-blur-sm p-0 sm:p-4"
-          onClick={closeModal}
+          onMouseDown={(e) => { if (e.target === e.currentTarget) closeModal(); }}
         >
           <motion.div
             initial={{ y: 60, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 60, opacity: 0 }}
             transition={{ type: "spring", damping: 28, stiffness: 300 }}
             onClick={(e) => e.stopPropagation()}
+            onMouseDown={(e) => e.stopPropagation()}
             className="relative w-full sm:max-w-lg bg-[#101010] border border-white/10 rounded-t-3xl sm:rounded-3xl p-6 sm:p-8 max-h-[92svh] overflow-y-auto pb-[calc(1.5rem+env(safe-area-inset-bottom))] sm:pb-8"
           >
             <button onClick={closeModal} className="absolute top-5 right-5 text-white/50 hover:text-white">
@@ -69,33 +89,33 @@ export default function LeadModal() {
               </div>
             ) : (
               <>
-                <h3 className="text-2xl font-bold text-white">Get Your Free Inspection</h3>
-                <p className="mt-2 text-sm text-white/55">Fast estimates. No pressure. No nonsense.</p>
+                <h3 className="text-2xl font-bold text-white">Schedule Your Free Inspection</h3>
+                <p className="mt-2 text-sm text-white/55">Quick turnaround. No pressure. Real answers.</p>
                 <form onSubmit={submit} className="mt-6 space-y-4">
                   <input
                     placeholder="Full name *" value={form.name}
                     autoComplete="name"
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none text-base"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none text-base touch-manipulation"
                   />
                   <div className="grid sm:grid-cols-2 gap-4">
                     <input
                       placeholder="Phone *" value={form.phone}
                       type="tel" inputMode="tel" autoComplete="tel"
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none text-base"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none text-base touch-manipulation"
                     />
                     <input
                       placeholder="Email" type="email" inputMode="email" autoComplete="email" value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none text-base"
+                      className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none text-base touch-manipulation"
                     />
                   </div>
                   <input
                     placeholder="Property address" value={form.address}
                     autoComplete="street-address"
                     onChange={(e) => setForm({ ...form, address: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none text-base"
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/40 focus:border-[#D71920] outline-none text-base touch-manipulation"
                   />
                   <select
                     value={form.service}

@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { Receipt, MessageSquare, Gem, Sparkles, Award } from "lucide-react";
 
 const POINTS = [
-  { icon: Receipt, title: "Transparent Estimates", text: "Itemized, honest pricing. You'll know exactly what you're paying for and why." },
-  { icon: MessageSquare, title: "Exceptional Communication", text: "Real updates from real people. You're never left wondering what's next." },
-  { icon: Gem, title: "GAF Master Elite", text: "We did the research over the past 22 years and you benefit from the knowledge that research provides." },
-  { icon: Sparkles, title: "Clean Job Sites", text: "Magnetic nail sweeps, daily cleanup, and a yard left better than we found it." },
-  { icon: Award, title: "Strong Warranties", text: "Labor and material warranties that actually mean something for decades." },
+  { icon: Receipt, title: "Transparent Estimates", text: "No line items buried in the fine print. Every cost explained before you sign." },
+  { icon: MessageSquare, title: "Exceptional Communication", text: "You'll hear from us at every stage — not just when there's a problem." },
+  { icon: Gem, title: "GAF Master Elite", text: "22 years of hands-on training and research so you don't have to wonder if your contractor knows what they're doing." },
+  { icon: Sparkles, title: "Clean Job Sites", text: "Magnetic sweeps, daily cleanup — we leave your yard cleaner than we found it." },
+  { icon: Award, title: "Strong Warranties", text: "Workmanship and material warranties that mean something, backed by a company that still answers the phone." },
 ];
 
 export default function WhyUs() {
@@ -20,7 +20,7 @@ export default function WhyUs() {
           transition={{ duration: 0.7 }}
           className="relative rounded-3xl overflow-hidden"
         >
-          <img src="/IMG_7074.jpg" alt="Completed Missouri roof" className="w-full h-[260px] sm:h-[380px] lg:h-[480px] object-cover" />
+          <img src="/IMG_7074.jpg" alt="Completed Iowa roof" className="w-full h-[260px] sm:h-[380px] lg:h-[480px] object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent" />
           <div className="absolute bottom-6 left-6 right-6 flex gap-6">
             <div>
@@ -37,10 +37,10 @@ export default function WhyUs() {
         <div>
           <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mb-3">Why Olde Town</p>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-            Built for Ozark weather. Built for homeowners.
+            Family owned. Quad Cities trusted. Built to outlast.
           </h2>
           <p className="text-white/60 text-lg mb-8">
-            22 years of being a family owned business, not a private equity firm. We price to live our lives — not to make yet another hedge fund manager a multimillionaire.
+            22 years as a family owned business — not acquired, not flipped, not folded into a private equity portfolio. We price work to be fair, not to hit a quarterly number.
           </p>
           <div className="grid sm:grid-cols-2 gap-6">
             {POINTS.map((p) => (

@@ -13,8 +13,13 @@ function clean(props: Record<string, any>) {
 }
 
 type Tag = keyof JSX.IntrinsicElements;
-const factory = (tag: Tag) =>
-  React.forwardRef<any, any>((props, ref) => React.createElement(tag, { ...clean(props), ref }));
+const cache = new Map<string, ReturnType<typeof React.forwardRef>>();
+const factory = (tag: Tag) => {
+  if (!cache.has(tag)) {
+    cache.set(tag, React.forwardRef<any, any>((props, ref) => React.createElement(tag, { ...clean(props), ref })));
+  }
+  return cache.get(tag);
+};
 
 export const motion: any = new Proxy(
   {},

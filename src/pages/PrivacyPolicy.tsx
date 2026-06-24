@@ -13,7 +13,7 @@ export default function PrivacyPolicy() {
 
       <main className="mx-auto max-w-4xl px-6 py-16">
         <h1 className="text-4xl font-bold mb-2">Privacy Policy</h1>
-        <p className="text-white/40 text-sm mb-12">Last updated: June 2025</p>
+        <p className="text-white/40 text-sm mb-12">Last updated: June 2026</p>
 
         <div className="prose prose-invert prose-sm max-w-none space-y-10 text-white/70 leading-relaxed">
 
@@ -64,7 +64,7 @@ export default function PrivacyPolicy() {
 
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">6. Data Retention</h2>
-            <p>We retain your information for as long as necessary to fulfill the purposes described in this policy, meet legal obligations, or resolve disputes. Customer records are typically retained for seven years in accordance with Missouri business record requirements.</p>
+            <p>We retain your information for as long as necessary to fulfill the purposes described in this policy, meet legal obligations, or resolve disputes. Customer records are typically retained for seven years in accordance with Iowa business record requirements.</p>
           </section>
 
           <section>
@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
             <p>Questions about this Privacy Policy? Contact us at:</p>
             <div className="mt-3 space-y-1">
               <p>Olde Town Roofing</p>
-              <p>2023 E Kearney Street Suite 102, Springfield, MO</p>
+              <p>Davenport, IA</p>
               <p><a href="mailto:seanv@oldetownroofing.com" className="text-[#D71920] hover:underline">seanv@oldetownroofing.com</a></p>
             </div>
           </section>

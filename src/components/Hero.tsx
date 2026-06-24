@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section id="top" className="relative min-h-svh flex items-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={IMAGES.hero} alt="New premium roof in Springfield Missouri" className="w-full h-full object-cover" />
+        <img src={IMAGES.hero} alt="New premium roof in Davenport Iowa" className="w-full h-full object-cover" fetchPriority="high" decoding="sync" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/85 to-[#0A0A0A]/30" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]/40" />
@@ -28,16 +28,16 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-[#D71920]/40 bg-[#D71920]/10 px-4 py-1.5 text-xs font-medium text-[#ff6b6e] mb-6">
             <span className="h-2 w-2 rounded-full bg-[#D71920] animate-pulse" />
-            Springfield & Southwest Missouri
+            Davenport & the Quad Cities
           </div>
 
           <h1 className="text-[2rem] leading-[1.05] sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white">
-            ROOFS BUILT TO <span className="text-[#D71920]">SURVIVE</span> MISSOURI STORMS
+            YOUR HOME DESERVES A ROOF THAT <span className="text-[#D71920]">LASTS</span>
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-white/70 max-w-xl">
-            Premium roofing, siding, gutters, and storm restoration throughout Springfield and Southwest Missouri.
-            Fast estimates. No pressure. No nonsense.
+            Roofing, siding, gutters, and storm restoration done right — serving Davenport and the Quad Cities.
+            Straight answers. Honest prices. No runaround.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">

@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import { UploadCloud, X, ImageIcon, Loader2, CheckCircle2 } from "lucide-react";
-import { supabase } from "@/lib/supabase";
 
 type Item = { id: string; name: string; url?: string; uploading: boolean; error?: boolean; preview: string };
 
@@ -16,6 +15,7 @@ export default function PhotoUpload({ onChange }: { onChange: (urls: string[]) =
 
   const uploadOne = async (file: File, item: Item, current: Item[]) => {
     try {
+      const { supabase } = await import("@/lib/supabase");
       const ext = file.name.split(".").pop() || "jpg";
       const path = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
       const { error } = await supabase.storage.from("roof-photos").upload(path, file, { upsert: false });

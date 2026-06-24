@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="sm:col-span-2 md:col-span-1">
           <Logo />
           <p className="mt-4 text-sm text-white/50 max-w-xs">
-            The premium roofing and storm restoration company serving Springfield and Southwest Missouri.
+            Premium roofing and storm restoration across Davenport, the Quad Cities, and surrounding Iowa and Illinois communities.
           </p>
           <div className="mt-5 space-y-2 text-sm text-white/60">
             <a href={PHONE_TEL} className="flex items-center gap-2 hover:text-white"><Phone className="h-4 w-4 text-[#D71920]" /> {PHONE}</a>
@@ -40,7 +40,11 @@ export default function Footer() {
           <ul className="space-y-2.5">
             {SERVICES.map((s) => (
               <li key={s.slug}>
-                <button onClick={() => openModal(s.title)} className="text-sm text-white/50 hover:text-white">{s.title}</button>
+                {s.slug === "financing" ? (
+                  <a href="#financing" className="text-sm text-white/50 hover:text-white">{s.title}</a>
+                ) : (
+                  <button onClick={() => openModal(s.title)} className="text-sm text-white/50 hover:text-white">{s.title}</button>
+                )}
               </li>
             ))}
           </ul>
@@ -50,7 +54,7 @@ export default function Footer() {
           <h4 className="text-white font-semibold mb-4 text-sm">Service Areas</h4>
           <ul className="space-y-2.5">
             {CITIES.map((c) => (
-              <li key={c}><span className="text-sm text-white/50">{c}, MO</span></li>
+              <li key={c}><span className="text-sm text-white/50">{c}</span></li>
             ))}
           </ul>
         </div>
@@ -66,6 +70,7 @@ export default function Footer() {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-white/40">
         <span>© {new Date().getFullYear()} Olde Town Roofing. Licensed & Insured. All rights reserved.</span>
+        <span>Built by <a href="https://www.supershiftlabs.com" target="_blank" rel="noopener noreferrer" className="hover:text-white/70">SuperShift Labs</a></span>
         <span className="flex gap-4">
           <Link to="/terms" className="hover:text-white/70">Terms & Conditions</Link>
           <Link to="/privacy" className="hover:text-white/70">Privacy Policy</Link>

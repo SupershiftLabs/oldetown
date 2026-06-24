@@ -10,6 +10,9 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+dist 2
+deploy.zip
+screenshot.cjs
 *.local
 
 # Editor directories and files

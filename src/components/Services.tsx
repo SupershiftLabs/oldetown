@@ -17,41 +17,38 @@ export default function Services() {
         <div className="max-w-2xl mb-14">
           <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Every exterior system. One premium crew.
+            Everything your home needs. One team you can trust.
           </h2>
           <p className="mt-4 text-white/60 text-lg">
-            From a single missing shingle to a full storm restoration and insurance claim — we handle it all.
+            Small repair or major storm claim — we handle the full scope so you never have to chase down a second contractor.
           </p>
         </div>
 
-        {/* Financing card — full-width featured row */}
-        {(() => {
-          const f = SERVICES[0];
-          const Icon = ICONS[f.icon];
-          return (
-            <motion.div
+        {/* Financing tabs */}
+        <div id="financing" className="mb-2">
+          <h3 className="text-lg font-bold text-[#D71920]">100% Financing Available</h3>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+          {[
+            { img: "/PreQualify_0.00-36Mo.png", alt: "0.00% for 36 Months", url: "https://prequalification.enerbank.com/apply/loanproduct?sponsorPhoneNumber=8664057600&contractorNumber=67212&loanCode=DEL2632&contractorEmail=seanv@oldetownroofing.com" },
+            { img: "/PreQualify_12Mo-SAC.png", alt: "12 Months Same As Cash", url: "https://prequalification.enerbank.com/apply/loanproduct?sponsorPhoneNumber=8664057600&contractorNumber=67212&loanCode=DEL2625&contractorEmail=seanv@oldetownroofing.com" },
+            { img: "/PreQualify_AsLowAs_8.99_TIL.png", alt: "As Low As 8.99%", url: "https://prequalification.enerbank.com/apply/loanproduct?sponsorPhoneNumber=8664057600&contractorNumber=67212&loanCode=DEL2622&contractorEmail=seanv@oldetownroofing.com" },
+          ].map((option) => (
+            <motion.a
+              key={option.img}
+              href={option.url}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="group relative rounded-2xl border border-[#D71920]/40 bg-gradient-to-r from-[#D71920]/10 to-transparent p-6 sm:p-8 hover:border-[#D71920]/70 transition-colors mb-4 flex flex-col sm:flex-row sm:items-center gap-6"
+              className="group rounded-2xl border border-[#D71920]/40 bg-gradient-to-b from-[#D71920]/10 to-transparent p-4 hover:border-[#D71920]/70 hover:scale-[1.02] transition-all overflow-hidden"
             >
-              <div className="h-14 w-14 rounded-xl bg-[#D71920]/20 flex items-center justify-center shrink-0 group-hover:bg-[#D71920] transition-colors">
-                <Icon className="h-7 w-7 text-[#D71920] group-hover:text-white transition-colors" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-white">{f.title}</h3>
-                <p className="mt-2 text-sm text-white/60 leading-relaxed max-w-3xl">{f.desc}</p>
-              </div>
-              <button
-                onClick={() => openModal(f.title)}
-                className="shrink-0 bg-[#D71920] hover:bg-[#b3141a] text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors"
-              >
-                Learn More
-              </button>
-            </motion.div>
-          );
-        })()}
+              <img src={option.img} alt={option.alt} className="w-full h-auto object-contain rounded-xl" />
+            </motion.a>
+          ))}
+        </div>
 
         {/* Remaining service cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

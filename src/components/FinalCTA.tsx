@@ -10,10 +10,10 @@ export default function FinalCTA() {
       <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/95 via-[#0A0A0A]/85 to-[#0A0A0A]" />
       <div className="relative mx-auto max-w-3xl px-4 sm:px-6 text-center">
         <h2 className="text-3xl sm:text-6xl font-extrabold text-white tracking-tight">
-          Schedule Your Free Roof Inspection
+          Get a Free Roof Inspection — No Strings Attached
         </h2>
         <p className="mt-5 text-lg sm:text-xl text-white/60">
-          No pressure. No gimmicks. Just honest roofing advice from local professionals. One inspection could save thousands.
+          A five-minute call could save you thousands. Local professionals, honest answers, zero pressure.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
           <button

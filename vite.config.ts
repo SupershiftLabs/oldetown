@@ -17,4 +17,13 @@ export default defineConfig(({ mode }) => ({
       "framer-motion": path.resolve(__dirname, "./src/lib/motion.tsx"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "vendor-react": ["react", "react-dom", "react-router-dom"],
+        },
+      },
+    },
+  },
 }));

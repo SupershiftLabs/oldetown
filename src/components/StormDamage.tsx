@@ -4,11 +4,11 @@ import { IMAGES } from "@/lib/site";
 import { useLead } from "./LeadContext";
 
 const STEPS = [
-  { icon: Search, title: "Free Inspection", text: "We climb the roof and document every hit, lift, and bruise — no guessing." },
-  { icon: FileText, title: "Documentation", text: "Photos, measurements, and a damage report built for your insurance carrier." },
-  { icon: ShieldCheck, title: "Insurance Support", text: "We meet your adjuster on-site and negotiate for the full scope you're owed." },
-  { icon: Hammer, title: "Repair or Replace", text: "Premium materials installed by a clean, professional, local crew." },
-  { icon: ClipboardCheck, title: "Final Walkthrough", text: "We don't leave until you've signed off and the site is spotless." },
+  { icon: Search, title: "Free Inspection", text: "We get on the roof and document every point of damage — no estimating from the driveway." },
+  { icon: FileText, title: "Documentation", text: "Photos, measurements, and a thorough report your insurance carrier can't dispute." },
+  { icon: ShieldCheck, title: "Insurance Support", text: "We stand next to your adjuster and make sure you get the full scope you're entitled to." },
+  { icon: Hammer, title: "Repair or Replace", text: "Top-tier materials, a professional crew, and a clean site from day one to done." },
+  { icon: ClipboardCheck, title: "Final Walkthrough", text: "We walk the property with you before we pack up. Your sign-off is our finish line." },
 ];
 
 export default function StormDamage() {
@@ -21,10 +21,10 @@ export default function StormDamage() {
         <div className="max-w-3xl mb-16">
           <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mb-3">Storm Restoration</p>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Storm damage? We'll handle the roof <span className="text-[#D71920]">and</span> the rest of the construction.
+            Storm hit your property? We handle the roof <span className="text-[#D71920]">and</span> the full rebuild.
           </h2>
           <p className="mt-4 text-lg text-white/60">
-            Missouri storms don't care how old your roof is. When the hail hits, we're ready — start to finish.
+            Quad Cities storms don't give warnings. When hail or wind strikes, we show up fast and see the job through — no hand-offs, no excuses.
           </p>
         </div>
 

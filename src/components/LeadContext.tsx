@@ -1,10 +1,4 @@
 import { createContext, useContext, useState, ReactNode } from "react";
-import emailjs from "@emailjs/browser";
-import { supabase } from "@/lib/supabase";
-
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || "";
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "";
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "";
 
 type LeadCtx = {
   open: boolean;
@@ -39,6 +33,7 @@ export function LeadProvider({ children }: { children: ReactNode }) {
 
   const submitLead = async (data: LeadData) => {
     try {
+      const { supabase } = await import("@/lib/supabase");
       await supabase.from("roofing_leads").insert({
         name: data.name,
         phone: data.phone,
@@ -50,20 +45,11 @@ export function LeadProvider({ children }: { children: ReactNode }) {
         photo_urls: data.photoUrls && data.photoUrls.length ? data.photoUrls : null,
       });
 
-      const recipients = ["sluggersusa@gmail.com", "amiegarciaotr@yahoo.com"];
-      const templateParams = {
-        to_email: recipients.join(","),
-        from_name: data.name,
-        from_phone: data.phone,
-        from_email: data.email || "Not provided",
-        address: data.address || "Not provided",
-        service: data.service || "Not specified",
-        message: data.message || "No message",
-        source: data.source || "lead-form",
-      };
-      if (EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY) {
-        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY);
-      }
+      await fetch("/contact.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
       if (data.email) {
         await fetch("https://famous.ai/api/crm/6a220c8e02b9295900ce46da/subscribe", {

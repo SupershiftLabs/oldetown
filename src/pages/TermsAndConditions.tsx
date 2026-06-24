@@ -13,7 +13,7 @@ export default function TermsAndConditions() {
 
       <main className="mx-auto max-w-4xl px-6 py-16">
         <h1 className="text-4xl font-bold mb-2">Terms & Conditions</h1>
-        <p className="text-white/40 text-sm mb-12">Last updated: June 2025</p>
+        <p className="text-white/40 text-sm mb-12">Last updated: June 2026</p>
 
         <div className="prose prose-invert prose-sm max-w-none space-y-10 text-white/70 leading-relaxed">
 
@@ -24,7 +24,7 @@ export default function TermsAndConditions() {
 
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">2. Services</h2>
-            <p>Olde Town Roofing provides roofing installation, repair, replacement, storm damage restoration, gutters, and related services in Springfield and Southwest Missouri. All services are subject to a written contract signed by both parties prior to commencement of work.</p>
+            <p>Olde Town Roofing provides roofing installation, repair, replacement, storm damage restoration, gutters, and related services in Davenport and the Quad Cities. All services are subject to a written contract signed by both parties prior to commencement of work.</p>
           </section>
 
           <section>
@@ -34,7 +34,7 @@ export default function TermsAndConditions() {
 
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">4. Insurance Claims</h2>
-            <p>We assist homeowners with insurance claims as a courtesy. We do not guarantee insurance approval or specific claim outcomes. The homeowner is responsible for understanding their policy terms. We do not waive deductibles or engage in any practice prohibited by Missouri law.</p>
+            <p>We assist homeowners with insurance claims as a courtesy. We do not guarantee insurance approval or specific claim outcomes. The homeowner is responsible for understanding their policy terms. We do not waive deductibles or engage in any practice prohibited by Iowa law.</p>
           </section>
 
           <section>
@@ -59,7 +59,7 @@ export default function TermsAndConditions() {
 
           <section>
             <h2 className="text-xl font-semibold text-white mb-3">9. Governing Law</h2>
-            <p>These Terms are governed by the laws of the State of Missouri. Any disputes shall be resolved in the courts of Greene County, Missouri.</p>
+            <p>These Terms are governed by the laws of the State of Iowa. Any disputes shall be resolved in the courts of Scott County, Iowa.</p>
           </section>
 
           <section>
@@ -67,7 +67,7 @@ export default function TermsAndConditions() {
             <p>Questions about these Terms? Contact us at:</p>
             <div className="mt-3 space-y-1">
               <p>Olde Town Roofing</p>
-              <p>2023 E Kearney Street Suite 102, Springfield, MO</p>
+              <p>Davenport, IA</p>
               <p><a href="mailto:seanv@oldetownroofing.com" className="text-[#D71920] hover:underline">seanv@oldetownroofing.com</a></p>
             </div>
           </section>
