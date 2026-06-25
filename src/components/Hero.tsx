@@ -12,14 +12,14 @@ const BADGES = [
 export default function Hero() {
   const { openModal } = useLead();
   return (
-    <section id="top" className="relative min-h-svh flex items-center overflow-hidden">
+    <section id="top" className="relative min-h-svh flex items-start sm:items-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={IMAGES.hero} alt="New premium roof in Davenport Iowa" className="w-full h-full object-cover" fetchPriority="high" decoding="sync" />
+        <img src={IMAGES.hero} alt="New premium roof in Davenport Iowa" className="w-full h-full object-cover object-[center_40%]" fetchPriority="high" decoding="sync" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/85 to-[#0A0A0A]/30" />
       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]/40" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-[33vh] sm:pt-28 pb-16 w-full">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-28 sm:pt-28 pb-16 w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

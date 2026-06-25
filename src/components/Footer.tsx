@@ -52,7 +52,7 @@ export default function Footer() {
 
         <div>
           <h3 className="text-white font-semibold mb-4 text-sm">Service Areas</h3>
-          <ul className="space-y-2.5">
+          <ul className="grid grid-cols-2 sm:grid-cols-1 gap-y-2.5">
             {CITIES.map((c) => (
               <li key={c}><span className="text-sm text-white/50">{c}</span></li>
             ))}
