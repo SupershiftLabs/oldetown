@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 type LeadCtx = {
   open: boolean;
@@ -24,6 +24,10 @@ const Ctx = createContext<LeadCtx | null>(null);
 export function LeadProvider({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   const [prefillService, setPrefill] = useState<string | undefined>();
+
+  useEffect(() => {
+    if (window.location.pathname === "/contact") openModal();
+  }, []);
 
   const openModal = (service?: string) => {
     setPrefill(service);
