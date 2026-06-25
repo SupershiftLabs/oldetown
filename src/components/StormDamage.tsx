@@ -19,7 +19,7 @@ export default function StormDamage() {
       <div className="absolute inset-0 bg-[#0A0A0A]/90" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <div className="max-w-3xl mb-16">
-          <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mb-3">Storm Restoration</p>
+          <p className="text-[#FF3B42] font-semibold text-sm uppercase tracking-widest mb-3">Storm Restoration</p>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
             Storm hit your property? We handle the roof <span className="text-[#D71920]">and</span> the full rebuild.
           </h2>

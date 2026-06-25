@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="mt-5 space-y-2 text-sm text-white/60">
             <a href={PHONE_TEL} className="flex items-center gap-2 hover:text-white"><Phone className="h-4 w-4 text-[#D71920]" /> {PHONE}</a>
             <a href="mailto:seanv@oldetownroofing.com" className="flex items-center gap-2 hover:text-white"><Mail className="h-4 w-4 text-[#D71920]" /> seanv@oldetownroofing.com</a>
-            <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[#D71920]" /> 2023 E Kearney Street Suite 102</div>
+            <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[#D71920]" /> 926 W 3rd Street, Davenport, IA 52802</div>
           </div>
           <div className="mt-6 flex gap-4">
             <a href="https://www.facebook.com/oldetownroofing" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-[#D71920] transition-colors" aria-label="Facebook">
@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-white font-semibold mb-4 text-sm">Services</h4>
+          <h3 className="text-white font-semibold mb-4 text-sm">Services</h3>
           <ul className="space-y-2.5">
             {SERVICES.map((s) => (
               <li key={s.slug}>
@@ -51,7 +51,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-white font-semibold mb-4 text-sm">Service Areas</h4>
+          <h3 className="text-white font-semibold mb-4 text-sm">Service Areas</h3>
           <ul className="space-y-2.5">
             {CITIES.map((c) => (
               <li key={c}><span className="text-sm text-white/50">{c}</span></li>
@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
 
         <div className="sm:col-span-2 md:col-span-1">
-          <h4 className="text-white font-semibold mb-4 text-sm">Get Started</h4>
+          <h3 className="text-white font-semibold mb-4 text-sm">Get Started</h3>
           <p className="text-sm text-white/50 mb-4">Free inspection. No pressure. No nonsense.</p>
           <button onClick={() => openModal()} className="w-full bg-[#D71920] hover:bg-[#b3141a] text-white font-semibold py-3 rounded-full text-sm">
             Get Free Inspection

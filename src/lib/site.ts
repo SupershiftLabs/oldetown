@@ -1,5 +1,5 @@
-export const PHONE = "417-408-7008";
-export const PHONE_TEL = "tel:+14174087008";
+export const PHONE = "309-738-5550";
+export const PHONE_TEL = "tel:+13097385550";
 export const BOOKING_URL =
   "https://famous.ai/api/crm/6a220c8e02b9295900ce46da/calendar/public?calendarId=219b3a6e-bd39-46c4-8cc5-b079655a86b8&view=booking";
 

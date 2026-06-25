@@ -35,7 +35,7 @@ export default function WhyUs() {
         </motion.div>
 
         <div>
-          <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mb-3">Why Olde Town</p>
+          <p className="text-[#FF3B42] font-semibold text-sm uppercase tracking-widest mb-3">Why Olde Town</p>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
             Family owned. Quad Cities trusted. Built to outlast.
           </h2>

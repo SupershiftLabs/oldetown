@@ -15,7 +15,7 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div>
-            <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mb-3">Our Story</p>
+            <p className="text-[#FF3B42] font-semibold text-sm uppercase tracking-widest mb-3">Our Story</p>
             <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
               Two decades of getting it right — and still family owned.
             </h2>
@@ -39,7 +39,7 @@ export default function About() {
                 </li>
               ))}
             </ul>
-            <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mt-8">
+            <p className="text-[#FF3B42] font-semibold text-sm uppercase tracking-widest mt-8">
               Licensed • Insured • Trusted Since 2004
             </p>
           </div>

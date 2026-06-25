@@ -15,7 +15,7 @@ export default function Services() {
     <section id="services" className="py-24 bg-[#0A0A0A]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="max-w-2xl mb-14">
-          <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
+          <p className="text-[#FF3B42] font-semibold text-sm uppercase tracking-widest mb-3">What We Do</p>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
             Everything your home needs. One team you can trust.
           </h2>

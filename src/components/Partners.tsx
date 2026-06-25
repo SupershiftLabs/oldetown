@@ -85,7 +85,7 @@ export default function Partners() {
     <section className="py-20 bg-[#0d0d0d] border-t border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="max-w-2xl mb-12">
-          <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mb-3">Trusted Brands</p>
+          <p className="text-[#FF3B42] font-semibold text-sm uppercase tracking-widest mb-3">Trusted Brands</p>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
             Our product partners.
           </h2>

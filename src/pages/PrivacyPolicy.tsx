@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
             <p>Questions about this Privacy Policy? Contact us at:</p>
             <div className="mt-3 space-y-1">
               <p>Olde Town Roofing</p>
-              <p>Davenport, IA</p>
+              <p>926 W 3rd Street, Davenport, IA 52802</p>
               <p><a href="mailto:seanv@oldetownroofing.com" className="text-[#D71920] hover:underline">seanv@oldetownroofing.com</a></p>
             </div>
           </section>

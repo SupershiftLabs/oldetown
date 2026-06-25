@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const SHOTS = [
   "/IMG_7060.jpg", "/IMG_7061.jpg", "/IMG_7062.jpg", "/IMG_7063.jpg",
-  "/IMG_7064.jpg", "/IMG_7065.jpg", "/IMG_7066.jpg", "/IMG_7067.jpg",
+  "/IMG_7064.jpg", "/IMG_7065.jpg", "/IMG_7066.jpg",
   "/IMG_7068.jpg", "/IMG_7069.jpg", "/IMG_7070.jpg", "/IMG_7071.jpg",
   "/IMG_7072.jpg", "/IMG_7073.jpg", "/IMG_7074.jpg", "/IMG_7075.jpg",
 ];
@@ -41,7 +41,7 @@ export default function Gallery() {
     <section id="projects" className="py-24 bg-[#0A0A0A]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="max-w-2xl mb-12">
-          <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mb-3">Project Gallery</p>
+          <p className="text-[#FF3B42] font-semibold text-sm uppercase tracking-widest mb-3">Project Gallery</p>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
             See the difference for yourself.
           </h2>

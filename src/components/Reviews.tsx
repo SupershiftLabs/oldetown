@@ -12,7 +12,7 @@ export default function Reviews() {
   return (
     <section id="reviews" className="py-24 bg-[#0d0d0d]">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
-        <p className="text-[#D71920] font-semibold text-sm uppercase tracking-widest mb-3">Customer Reviews</p>
+        <p className="text-[#FF3B42] font-semibold text-sm uppercase tracking-widest mb-3">Customer Reviews</p>
         <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-2">
           What our customers say.
         </h2>
